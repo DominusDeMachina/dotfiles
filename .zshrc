@@ -111,6 +111,13 @@ clc() {
   env "${env_vars[@]}" command claude "$@"
 }
 
+brew() {
+  command brew "$@"
+  if [[ "$1" == "install" || "$1" == "uninstall" || "$1" == "tap" ]]; then
+    brew bundle dump --force --file=~/Brewfile
+  fi
+}
+
 # ─── Completion ───────────────────────────────────────────
 autoload -Uz compinit && compinit
 
