@@ -201,12 +201,28 @@ mkdir -p ~/.local/bin
 ```bash
 cat > ~/.local/bin/dotfiles-watch << 'EOF'
 #!/bin/bash
-fswatch -o ~/.zshrc ~/.gitconfig ~/.config/ | while read; do
-  git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add -u
-  git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME diff --cached --quiet || {
-    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit -m "auto: $(date '+%Y-%m-%d %H:%M')"
-    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push
-  }
+fswatch -o \
+  ~/.zshrc \
+  ~/.gitconfig \
+  ~/.config/starship.toml \
+  ~/.config/nvim \
+  ~/.config/ghostty \
+  ~/.config/bat \
+  ~/.config/btop \
+  ~/.config/gh \
+  ~/.config/gh-dash \
+  ~/.config/git \
+  ~/.config/htop \
+  ~/.config/mole \
+  ~/.config/op \
+  ~/.config/raycast \
+  ~/.config/thefuck \
+  ~/.config/wireshark \
+  | while read; do
+    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add -u
+    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME diff --cached --quiet || \
+      git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit -m "auto: $(date '+%Y-%m-%d %H:%M')" && \
+      git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push
 done
 EOF
 ```
