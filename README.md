@@ -44,6 +44,7 @@ dotfiles checkout
 ```
 
 > If checkout fails due to existing files:
+>
 > ```bash
 > mkdir -p ~/.dotfiles-backup
 > dotfiles checkout 2>&1 | grep "already exists" | awk '{print $1}' | \
@@ -68,25 +69,30 @@ source ~/.zshrc
 ## Language Runtimes
 
 ### Node (nvm)
+
 ```bash
 nvm install --lts
 nvm use --lts
 ```
+
 > `.nvmrc` files are picked up automatically on `cd`.
 
 ### Python (pyenv)
+
 ```bash
 pyenv install 3.x.x
 pyenv global 3.x.x
 ```
 
 ### Ruby (rbenv)
+
 ```bash
 rbenv install 3.x.x
 rbenv global 3.x.x
 ```
 
 ### .NET
+
 Already on PATH via `dotnet@8` in Brewfile.
 
 ---
@@ -94,13 +100,16 @@ Already on PATH via `dotnet@8` in Brewfile.
 ## React Native
 
 ### iOS
+
 ```bash
 sudo gem install cocoapods
 sudo xcodebuild -license accept
 ```
+
 Open Xcode → **Settings → Platforms** → install simulators.
 
 ### Android
+
 - Open **Android Studio** → **SDK Manager** → install Android SDK
 - `ANDROID_HOME` and PATH are already set in `.zshrc`
 - `JAVA_HOME` points to Zulu JDK 17 (installed via Brewfile)
@@ -173,4 +182,92 @@ dotfiles push
     ├── ghostty/
     ├── kanata/
     └── ...
+```
+
+# Dotfiles Auto-Sync with fswatch
+
+## Step 1 — Install fswatch
+
+```bash
+brew install fswatch
+```
+
+## Step 2 — Create the watch script
+
+```bash
+mkdir -p ~/.local/bin
+```
+
+```bash
+cat > ~/.local/bin/dotfiles-watch << 'EOF'
+#!/bin/bash
+fswatch -o ~/.zshrc ~/.gitconfig ~/.config/ | while read; do
+  git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add -u
+  git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME diff --cached --quiet || {
+    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit -m "auto: $(date '+%Y-%m-%d %H:%M')"
+    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push
+  }
+done
+EOF
+```
+
+```bash
+chmod +x ~/.local/bin/dotfiles-watch
+```
+
+## Step 3 — Create the launchd plist
+
+```bash
+cat > ~/Library/LaunchAgents/dotfiles.watch.plist << EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>dotfiles.watch</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>$HOME/.local/bin/dotfiles-watch</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>StandardOutPath</key>
+  <string>/tmp/dotfiles-watch.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/dotfiles-watch.log</string>
+</dict>
+</plist>
+EOF
+```
+
+## Step 4 — Load it
+
+```bash
+launchctl load ~/Library/LaunchAgents/dotfiles.watch.plist
+```
+
+## Verify it's running
+
+```bash
+launchctl list | grep dotfiles
+cat /tmp/dotfiles-watch.log
+```
+
+---
+
+## Useful commands
+
+```bash
+# Stop
+launchctl unload ~/Library/LaunchAgents/dotfiles.watch.plist
+
+# Restart
+launchctl unload ~/Library/LaunchAgents/dotfiles.watch.plist
+launchctl load ~/Library/LaunchAgents/dotfiles.watch.plist
+
+# Watch the log live
+tail -f /tmp/dotfiles-watch.log
 ```
