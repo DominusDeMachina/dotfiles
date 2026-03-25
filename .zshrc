@@ -102,13 +102,13 @@ export PATH="$HOME/.local/bin:$HOME/worldbanc/private/bin:$PATH"
 
 
 # Claude Code launcher
-clc() {
+ccd() {
   local env_vars=(
     GH_TOKEN="$(op read 'op://Personal/GitHub Personal Access Token DominusDeMachina/token')"
   )
 
   unalias gh 2>/dev/null
-  env "${env_vars[@]}" command claude "$@"
+  env "${env_vars[@]}" command claude --dangerously-skip-permissions "$@"
 }
 
 brew() {
