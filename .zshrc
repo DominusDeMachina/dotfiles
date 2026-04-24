@@ -49,10 +49,6 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
 export PATH="/opt/homebrew/opt/dotnet@8/bin:$PATH"
 
 source <(fzf --zsh)
@@ -64,28 +60,10 @@ export FZF_DEFAULT_OPTS=" \
 --color=border:#313244,label:#cdd6f4"
 source /Users/gennadiyfurduy/.config/op/plugins.sh
 
-# Auto-switch Node versions based on .nvmrc
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-    local nvm_current_version=$(nvm version)
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$nvm_current_version" ]; then
-      nvm use
-    fi
-  elif [ -n "$(PWD=$OLDPWD nvm_find_nvmrc)" ] && [ "$(nvm version)" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-eval "$(rbenv init -)"
+# ─── Runtime manager (mise) ───────────────────────────────
+# Handles Node + Python + Ruby + Java. Reads .tool-versions, .nvmrc,
+# .ruby-version, .python-version automatically on cd.
+eval "$(mise activate zsh)"
 
 # End of Docker CLI completions
 export PATH="$HOME/.local/bin:$HOME/worldbanc/private/bin:$PATH"
@@ -99,10 +77,6 @@ export PATH="$HOME/.local/bin:$HOME/worldbanc/private/bin:$PATH"
 [[ ! -r '/Users/gennadiyfurduy/.opam/opam-init/init.zsh' ]] || source '/Users/gennadiyfurduy/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
 #
-#  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-
 
 # Claude Code launcher
 ccd() {
