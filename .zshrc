@@ -38,6 +38,9 @@ alias v='nvim'
 alias lg='lazygit'
 alias y='yazi'
 
+# React Native — full clean (node_modules + pods + xcode env + watchman + metro)
+alias rnfullclean='rm -rf node_modules ios/Pods && yarn && watchman watch-del-all && z ios && pod install --repo-update && rm -rf .xcode.env.local && z ..'
+
 eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
 
