@@ -13,7 +13,9 @@
       "Bash(chmod:*)",
       "Bash(bash:*)",
       "Bash(find:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(rm -rf ~/Library/Developer/Xcode/DerivedData:*)",
+      "mcp__argent"
     ],
     "deny": [
       "Read(.env*)",
@@ -21,13 +23,114 @@
     ],
     "defaultMode": "auto"
   },
+  "model": "claude-fable-5-1[1m]",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__argent__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"/Users/gennadiyfurduy/.claude/hooks/argent-sim-gate.py\"",
+            "timeout": 15
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write|NotebookEdit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"/Users/gennadiyfurduy/.claude/hooks/worktree-gate.py\"",
+            "timeout": 15,
+            "statusMessage": "Checking branch/worktree..."
+          },
+          {
+            "type": "command",
+            "command": "python3 \"/Users/gennadiyfurduy/.claude/hooks/repro-gate.py\"",
+            "timeout": 60,
+            "statusMessage": "Checking bug reproduction..."
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"/Users/gennadiyfurduy/.claude/hooks/goal-report-gate.py\"",
+            "timeout": 15,
+            "statusMessage": "Checking goal report..."
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/gennadiyfurduy/.claude/hooks/caveman-activate.js\"",
+            "timeout": 5,
+            "statusMessage": "Loading caveman mode..."
+          }
+        ]
+      },
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/Users/gennadiyfurduy/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"/Users/gennadiyfurduy/.claude/skills/argent-ephemeral-simulator/scripts/cleanup-ephemeral-sims.sh\" --gc",
+            "timeout": 60,
+            "statusMessage": "GC of leaked ephemeral simulators...",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"/Users/gennadiyfurduy/.claude/skills/argent-ephemeral-simulator/scripts/cleanup-ephemeral-sims.sh\"",
+            "timeout": 60,
+            "statusMessage": "Cleaning up ephemeral simulators..."
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/gennadiyfurduy/.claude/hooks/caveman-mode-tracker.js\"",
+            "timeout": 5,
+            "statusMessage": "Tracking caveman mode..."
+          }
+        ]
+      }
+    ]
+  },
   "statusLine": {
     "type": "command",
     "command": "bash /Users/gennadiyfurduy/.claude/statusline-command.sh"
   },
   "enabledPlugins": {
+    "lua-lsp@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true,
-    "lua-lsp@claude-plugins-official": true
+    "swift-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "ai-mt": {
@@ -35,13 +138,23 @@
         "source": "directory",
         "path": "/Users/gennadiyfurduy/ratel/ai-mt"
       }
+    },
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
     }
   },
-  "effortLevel": "high",
-  "advisorModel": "opus",
+  "effortLevel": "xhigh",
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
   "skipDangerousModePermissionPrompt": true,
-  "skipAutoPermissionPrompt": true,
-  "voiceEnabled": true,
   "theme": "dark-ansi",
-  "editorMode": "vim"
+  "editorMode": "vim",
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true,
+  "voiceEnabled": true
 }

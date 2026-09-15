@@ -1,0 +1,19 @@
+[[plugin.deps]]
+use = "AnirudhG07/rich-preview"
+rev = "573b275"
+hash = "c3e2871c9ef244fd181f203791f9b0d2"
+
+[[plugin.deps]]
+use = "ruudjhuu/f3d-preview"
+rev = "76d115d"
+hash = "6b2008327d65fe374d99f6b6ff007cba"
+
+[[flavor.deps]]
+use = "kalidyasin/yazi-flavors:tokyonight-moon"
+rev = "70fe6b4"
+hash = "4dbcdb01334e5b7c93f4f59d46cc8def"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "1a5f787"
+hash = "7dfe41c9c3d9be76da8a844263d0bbed"

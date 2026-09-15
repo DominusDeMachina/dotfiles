@@ -1,0 +1,9 @@
+[tools]
+node = "24"
+"npm:@biomejs/biome" = "2.4.14"
+"npm:pyright" = "1.1.414"
+"npm:typescript" = "6.0.3"
+"npm:typescript-language-server" = "6.0.0"
+"npm:vscode-langservers-extracted" = "4.10.0"
+python = "3.13"
+ruby = "3.3"

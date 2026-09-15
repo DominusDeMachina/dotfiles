@@ -1,0 +1,47 @@
+[
+  {
+    "name": "cyberchef",
+    "title": "CyberChef",
+    "author": "mblode"
+  },
+  {
+    "name": "color-picker",
+    "title": "Color Picker",
+    "author": "thomas"
+  },
+  {
+    "name": "ray-boop",
+    "title": "Ray Boop",
+    "author": "nathan_schwermann"
+  },
+  {
+    "name": "warp",
+    "title": "Warp",
+    "author": "joetannenbaum"
+  },
+  {
+    "name": "ruler",
+    "title": "Ruler",
+    "author": "anwarulislam"
+  },
+  {
+    "name": "brew",
+    "title": "Brew",
+    "author": "nhojb"
+  },
+  {
+    "name": "linear",
+    "title": "Linear",
+    "author": "thomaslombart"
+  },
+  {
+    "name": "1password",
+    "title": "1Password",
+    "author": "khasbilegt"
+  },
+  {
+    "name": "kill-process",
+    "title": "Kill Process",
+    "author": "rolandleth"
+  }
+]

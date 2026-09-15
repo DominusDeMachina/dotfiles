@@ -1,7 +1,7 @@
 # ~/.config/starship.toml
 
 format = """
-$directory$git_branch$git_status$nodejs$package
+$directory$git_branch$git_state$git_status$nodejs$package
 $character"""
 
 # ─── Prompt character ─────────────────────────────────────
@@ -62,4 +62,3 @@ disabled = true
 
 [java]
 disabled = true
-

@@ -36,7 +36,7 @@ alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'
 alias f='fuck'
 alias v='nvim'
 alias lg='lazygit'
-alias y='yazi'
+alias ccd='claude --dangerously-skip-permissions'
 
 # React Native — full clean (node_modules + pods + xcode env + watchman + metro)
 alias rnfullclean='rm -rf node_modules ios/Pods && yarn && watchman watch-del-all && z ios && pod install --repo-update && rm -rf .xcode.env.local && z ..'
@@ -78,16 +78,6 @@ export PATH="$HOME/.local/bin:$HOME/worldbanc/private/bin:$PATH"
 # END opam configuration
 #
 
-# Claude Code launcher
-ccd() {
-  local env_vars=(
-    GH_TOKEN="$(op read 'op://Personal/GitHub Personal Access Token DominusDeMachina/token')"
-  )
-
-  unalias gh 2>/dev/null
-  env "${env_vars[@]}" command claude --dangerously-skip-permissions "$@"
-}
-
 brew() {
   command brew "$@"
   if [[ "$1" == "install" || "$1" == "uninstall" || "$1" == "tap" ]]; then
@@ -119,3 +109,25 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=240'
 
 eval "$(starship init zsh)"
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Pi
+export PATH="/Users/gennadiyfurduy/.local/share/mise/installs/node/24.15.0/bin:$PATH"
+
+# bun completions
+[ -s "/Users/gennadiyfurduy/.bun/_bun" ] && source "/Users/gennadiyfurduy/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# opencode
+export PATH=/Users/gennadiyfurduy/.opencode/bin:$PATH
+
+#yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	command rm -f -- "$tmp"
+}

@@ -1,0 +1,14 @@
+{
+    "editor.fontSize": 16,
+    "RadonIDE.deviceSettings.location": {
+        "latitude": 37.78825,
+        "longitude": -122.4324,
+        "isDisabled": true
+    },
+    "atlascode.rovodev.showEntitlementNotifications": false,
+    "editor.accessibilitySupport": "on",
+    "RadonIDE.userInterface.panelLocation": "tab",
+    "claudeCode.preferredLocation": "panel",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha"
+}

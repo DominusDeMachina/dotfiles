@@ -1,0 +1,10 @@
+customCommands:
+  - key: "C"
+    context: "files"
+    description: "Generate commit message with Claude Code"
+    command: |-
+      commit_msg="$(mktemp "${TMPDIR:-/tmp}/lazygit-commit.XXXXXX")" || exit 1
+      trap 'rm -f "$commit_msg"' EXIT
+      git diff --staged | /Users/gennadiyfurduy/.local/bin/claude -p 'Generate a concise git commit message for these staged changes. Output ONLY the raw commit message with no markdown, no code blocks, no backticks, no explanations. Use conventional commit format.' --model haiku --output-format text > "$commit_msg" &&
+        GIT_EDITOR=vim git commit -e -F "$commit_msg"
+    output: terminal

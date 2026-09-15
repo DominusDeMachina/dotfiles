@@ -1,12 +1,34 @@
-# This is the configuration file for Ghostty.
-#
-# This template file has been automatically created at the following
-# path since Ghostty couldn't find any existing config files on your system:
-#
-#   /Users/gennadiyfurduy/Library/Application Support/com.mitchellh.ghostty/config
-#
-
+# Canonical Ghostty configuration. Keep settings here to avoid macOS overrides.
 font-family = FiraCode Nerd Font Mono
 font-size = 16
-theme = catppuccin-mocha.conf
+theme = Catppuccin Mocha
 keybind = delete=text:\x08
+
+# Enter Vim scrolling mode with Alt+V.
+keybind = alt+v=activate_key_table:vim
+keybind = vim/
+
+# Line and page movement.
+keybind = vim/j=scroll_page_lines:1
+keybind = vim/k=scroll_page_lines:-1
+keybind = vim/ctrl+d=scroll_page_down
+keybind = vim/ctrl+u=scroll_page_up
+keybind = vim/ctrl+f=scroll_page_down
+keybind = vim/ctrl+b=scroll_page_up
+keybind = vim/shift+j=scroll_page_down
+keybind = vim/shift+k=scroll_page_up
+keybind = vim/g>g=scroll_to_top
+keybind = vim/shift+g=scroll_to_bottom
+
+# Search, copy, and command palette.
+keybind = vim/slash=start_search
+keybind = vim/n=navigate_search:next
+keybind = vim/v=copy_to_clipboard
+keybind = vim/y=copy_to_clipboard
+keybind = vim/shift+semicolon=toggle_command_palette
+
+# Exit scrolling mode and ignore other keys while it is active.
+keybind = vim/escape=deactivate_key_table
+keybind = vim/q=deactivate_key_table
+keybind = vim/i=deactivate_key_table
+keybind = vim/catch_all=ignore

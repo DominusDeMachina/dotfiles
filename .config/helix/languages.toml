@@ -2,6 +2,14 @@
 command = "biome"
 args = ["lsp-proxy"]
 
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
+
+# Prefer each project's TypeScript; use mise's compatible version for standalone files.
+[language-server.typescript-language-server.config.tsserver]
+fallbackPath = "/Users/gennadiyfurduy/.local/share/mise/installs/npm-typescript/6/node_modules/typescript/lib/tsserver.js"
+
 [[language]]
 name = "typescript"
 language-servers = ["typescript-language-server", "biome"]
@@ -28,22 +36,14 @@ auto-format = true
 
 [[language]]
 name = "python"
-language-servers = ["pyright", "ruff-lsp"]
+language-servers = ["pyright", "ruff"]
 formatter = { command = "ruff", args = ["format", "-"] }
 auto-format = true
-
-[language-server.pyright]
-command = "pyright-langserver"
-args = ["--stdio"]
-
-[language-server.ruff]
-command = "ruff-lsp"
 
 [language.debugger]
 name = "debugpy"
 transport = "stdio"
-command = "python"
-args = ["-m", "debugpy.adapter"]
+command = "debugpy-adapter"
 
 [[language.debugger.templates]]
 name = "launch"
@@ -63,3 +63,10 @@ request = "attach"
   host = "127.0.0.1"
   port = "5678"
 
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]

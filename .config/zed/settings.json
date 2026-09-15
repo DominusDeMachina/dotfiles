@@ -7,6 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "icon_theme": "Catppuccin Mocha",
   "terminal": {
     "font_family": "FiraCode Nerd Font",
@@ -21,15 +33,28 @@
   },
   "base_keymap": "JetBrains",
   "agent": {
+    "dock": "right",
     "button": true,
     "enabled": true,
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-4o"
     },
+    "tool_permissions": {
+      "default": "allow"
+    },
   },
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "theme": "Catppuccin Mocha",
-  "vim_mode": true
+  "vim_mode": true,
+  "context_servers": {
+    "argent": {
+      "source": "custom",
+      "command": "argent",
+      "args": [
+        "mcp"
+      ]
+    }
+  }
 }
