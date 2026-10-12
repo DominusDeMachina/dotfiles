@@ -74,7 +74,6 @@
 .config/zed/keymap.json
 .config/zed/settings.json
 .gitconfig
-.gitmux.conf
 .ideavimrc
 .ssh/config
 .tmux.conf
