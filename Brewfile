@@ -37,10 +37,6 @@ brew "ghostscript"
 brew "git-delta"
 # Audit git repos for secrets
 brew "gitleaks"
-# Terminal multiplexer
-brew "tmux"
-# Git status in tmux status bar
-brew "gitmux"
 # Render markdown on the CLI
 brew "glow"
 # Open source programming language to build simple/reliable/efficient software
@@ -109,6 +105,8 @@ brew "television"
 brew "thefuck"
 # Official tldr client written in Rust
 brew "tlrc"
+# Terminal multiplexer
+brew "tmux"
 # Network diagnostic tool, inspired by mtr
 brew "trippy"
 # Extremely fast Python package installer and resolver, written in Rust
