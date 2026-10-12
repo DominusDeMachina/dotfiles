@@ -71,8 +71,6 @@
 .config/yazi/plugins/rich-preview.yazi/main.lua
 .config/yazi/theme.toml
 .config/yazi/yazi.toml
-.config/zed/keymap.json
-.config/zed/settings.json
 .gitconfig
 .ideavimrc
 .ssh/config

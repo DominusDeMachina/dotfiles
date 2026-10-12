@@ -133,10 +133,6 @@ cask "1password"
 cask "1password/tap/1password-cli"
 # Tools for building Android applications
 cask "android-studio"
-# Application uninstaller
-cask "appcleaner"
-# Scriptable scratchpad for developers
-cask "boop"
 cask "flux-markdown"
 cask "font-fira-code-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
@@ -159,20 +155,12 @@ cask "omnidisksweeper"
 cask "onyx"
 # Control your tools with a few keystrokes
 cask "raycast"
-# .NET IDE
-cask "rider"
 # Messaging app with a focus on speed and security
 cask "telegram"
-# Open-source BitTorrent client
-cask "transmission"
 # Open-source code editor
 cask "visual-studio-code"
 # Menu bar toolkit with keep-awake, system monitor and volume mixer
 cask "vorssaint"
-# Connect to Windows
-cask "windows-app"
-# Multiplayer code editor
-cask "zed"
 # OpenJDK distribution from Azul
 cask "zulu@21"
 vscode "anthropic.claude-code"
