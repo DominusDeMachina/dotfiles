@@ -1,5 +1,5 @@
 {
-  "captured": "2026-09-15T07:22:39.939525+00:00",
+  "captured": "2026-10-12T11:03:13.823222+00:00",
   "apps": [
     {
       "name": ".Karabiner-VirtualHIDDevice-Manager",
@@ -8,22 +8,16 @@
       "location": "/Applications/.Karabiner-VirtualHIDDevice-Manager.app"
     },
     {
-      "name": "1Password for Safari",
-      "version": "8.12.37",
-      "bundle_id": "com.1password.safari",
-      "location": "/Applications/1Password for Safari.app"
-    },
-    {
       "name": "1Password",
-      "version": "8.12.36",
+      "version": "8.12.40",
       "bundle_id": "com.1password.1password",
       "location": "/Applications/1Password.app"
     },
     {
-      "name": "Android File Transfer",
-      "version": "1.0.12",
-      "bundle_id": "com.google.android.mtpviewer",
-      "location": "/Applications/Android File Transfer.app"
+      "name": "1Password for Safari",
+      "version": "8.12.41",
+      "bundle_id": "com.1password.safari",
+      "location": "/Applications/1Password for Safari.app"
     },
     {
       "name": "Android Studio",
@@ -38,32 +32,26 @@
       "location": "/Applications/BambuStudio.app"
     },
     {
-      "name": "Caffeine",
-      "version": "1.6.4",
-      "bundle_id": "net.domzilla.caffeine",
-      "location": "/Applications/Caffeine.app"
-    },
-    {
       "name": "ChatGPT",
-      "version": "26.908.70816",
+      "version": "26.1007.30912",
       "bundle_id": "com.openai.codex",
       "location": "/Applications/ChatGPT.app"
     },
     {
       "name": "Claude",
-      "version": "1.52386.6",
+      "version": "2.31226.1",
       "bundle_id": "com.anthropic.claudefordesktop",
       "location": "/Applications/Claude.app"
     },
     {
-      "name": "DBeaver",
-      "version": "26.1.5",
-      "bundle_id": "org.jkiss.dbeaver.core.product",
-      "location": "/Applications/DBeaver.app"
+      "name": "Claude Code URL Handler",
+      "version": "",
+      "bundle_id": "com.anthropic.claude-code-url-handler",
+      "location": "/Users/gennadiyfurduy/Applications/Claude Code URL Handler.app"
     },
     {
       "name": "Developer",
-      "version": "11.0.2",
+      "version": "11.1",
       "bundle_id": "developer.apple.wwdc-Release",
       "location": "/Applications/Developer.app"
     },
@@ -72,18 +60,6 @@
       "version": "0.0.398",
       "bundle_id": "com.hnc.Discord",
       "location": "/Applications/Discord.app"
-    },
-    {
-      "name": "Docker",
-      "version": "4.88.0",
-      "bundle_id": "com.docker.docker",
-      "location": "/Applications/Docker.app"
-    },
-    {
-      "name": "Figma",
-      "version": "126.7.10",
-      "bundle_id": "com.figma.Desktop",
-      "location": "/Applications/Figma.app"
     },
     {
       "name": "FluxMarkdown",
@@ -99,15 +75,9 @@
     },
     {
       "name": "Google Chrome",
-      "version": "152.0.7977.84",
+      "version": "154.0.8037.98",
       "bundle_id": "com.google.Chrome",
       "location": "/Applications/Google Chrome.app"
-    },
-    {
-      "name": "Jarvis",
-      "version": "0.3.0",
-      "bundle_id": "com.jarvis.menubar",
-      "location": "/Applications/Jarvis.app"
     },
     {
       "name": "Karabiner-Elements",
@@ -122,76 +92,58 @@
       "location": "/Applications/Karabiner-EventViewer.app"
     },
     {
-      "name": "LM Studio",
-      "version": "0.4.12+1",
-      "bundle_id": "ai.elementlabs.lmstudio",
-      "location": "/Applications/LM Studio.app"
-    },
-    {
       "name": "LanScan",
-      "version": "8.2.16",
+      "version": "8.2.17",
       "bundle_id": "com.iwaxx.LanScan",
       "location": "/Applications/LanScan.app"
     },
     {
       "name": "Microsoft Excel",
-      "version": "16.112.4",
+      "version": "16.113.4",
       "bundle_id": "com.microsoft.Excel",
       "location": "/Applications/Microsoft Excel.app"
     },
     {
       "name": "Microsoft Outlook",
-      "version": "16.112.4",
+      "version": "16.113.3",
       "bundle_id": "com.microsoft.Outlook",
       "location": "/Applications/Microsoft Outlook.app"
     },
     {
-      "name": "Microsoft PowerPoint",
-      "version": "16.112.4",
-      "bundle_id": "com.microsoft.Powerpoint",
-      "location": "/Applications/Microsoft PowerPoint.app"
-    },
-    {
       "name": "Microsoft Teams",
-      "version": "26225.1706.5101.3140",
+      "version": "26246.1709.5146.8945",
       "bundle_id": "com.microsoft.teams2",
       "location": "/Applications/Microsoft Teams.app"
     },
     {
       "name": "Microsoft Word",
-      "version": "16.112.4",
+      "version": "16.113.3",
       "bundle_id": "com.microsoft.Word",
       "location": "/Applications/Microsoft Word.app"
     },
     {
       "name": "Moshi",
-      "version": "unknown",
+      "version": "",
       "bundle_id": "",
       "location": "/Applications/Moshi.app"
     },
     {
       "name": "Neru",
-      "version": "1.51.0",
+      "version": "1.56.0",
       "bundle_id": "com.y3owk1n.neru",
       "location": "/Applications/Neru.app"
-    },
-    {
-      "name": "OBS",
-      "version": "32.2.1",
-      "bundle_id": "com.obsproject.obs-studio",
-      "location": "/Applications/OBS.app"
-    },
-    {
-      "name": "Obsidian Web Clipper",
-      "version": "1.7.1",
-      "bundle_id": "md.obsidian.Obsidian-Web-Clipper",
-      "location": "/Applications/Obsidian Web Clipper.app"
     },
     {
       "name": "Obsidian",
       "version": "1.13.7",
       "bundle_id": "md.obsidian",
       "location": "/Applications/Obsidian.app"
+    },
+    {
+      "name": "Obsidian Web Clipper",
+      "version": "1.7.1",
+      "bundle_id": "md.obsidian.Obsidian-Web-Clipper",
+      "location": "/Applications/Obsidian Web Clipper.app"
     },
     {
       "name": "OmniDiskSweeper",
@@ -201,15 +153,9 @@
     },
     {
       "name": "OnyX",
-      "version": "5.0.4",
+      "version": "5.1.0",
       "bundle_id": "com.titanium.OnyX",
       "location": "/Applications/OnyX.app"
-    },
-    {
-      "name": "OpenCode",
-      "version": "1.18.22",
-      "bundle_id": "ai.opencode.desktop",
-      "location": "/Applications/OpenCode.app"
     },
     {
       "name": "Pixelmator Pro",
@@ -219,33 +165,21 @@
     },
     {
       "name": "Raycast",
-      "version": "2.4.1.0",
+      "version": "2.7.3.0",
       "bundle_id": "com.raycast.macos",
       "location": "/Applications/Raycast.app"
     },
     {
       "name": "RustDesk",
-      "version": "1.4.9",
+      "version": "1.5.0",
       "bundle_id": "com.carriez.rustdesk",
       "location": "/Applications/RustDesk.app"
     },
     {
       "name": "Safari",
-      "version": "27.0",
+      "version": "27.0.1",
       "bundle_id": "com.apple.Safari",
       "location": "/Applications/Safari.app"
-    },
-    {
-      "name": "Shortcat",
-      "version": "0.12.2",
-      "bundle_id": "com.sproutcube.Shortcat",
-      "location": "/Applications/Shortcat.app"
-    },
-    {
-      "name": "Shottr",
-      "version": "1.9.1",
-      "bundle_id": "cc.ffitch.shottr",
-      "location": "/Applications/Shottr.app"
     },
     {
       "name": "Tailscale",
@@ -255,13 +189,13 @@
     },
     {
       "name": "Telegram 2",
-      "version": "7.2.8",
+      "version": "7.3.1",
       "bundle_id": "com.tdesktop.Telegram",
       "location": "/Applications/Telegram 2.app"
     },
     {
       "name": "TestFlight",
-      "version": "4.3.1",
+      "version": "4.4.0",
       "bundle_id": "com.apple.TestFlight",
       "location": "/Applications/TestFlight.app"
     },
@@ -279,51 +213,27 @@
     },
     {
       "name": "UniFi Endpoint",
-      "version": "4.2.1",
+      "version": "4.2.2",
       "bundle_id": "com.ui.uid.standard-desktop",
       "location": "/Applications/UniFi Endpoint.app"
     },
     {
-      "name": "VLC",
-      "version": "3.0.23",
-      "bundle_id": "org.videolan.vlc",
-      "location": "/Applications/VLC.app"
-    },
-    {
       "name": "Visual Studio Code",
-      "version": "1.134.0",
+      "version": "1.140.0",
       "bundle_id": "com.microsoft.VSCode",
       "location": "/Applications/Visual Studio Code.app"
     },
     {
-      "name": "Windows App",
-      "version": "11.3.8",
-      "bundle_id": "com.microsoft.rdc.macos",
-      "location": "/Applications/Windows App.app"
+      "name": "Vorssaint",
+      "version": "3.4.1",
+      "bundle_id": "com.vorssaint.utils",
+      "location": "/Applications/Vorssaint.app"
     },
     {
       "name": "Xcode",
       "version": "27.0",
       "bundle_id": "com.apple.dt.Xcode",
       "location": "/Applications/Xcode.app"
-    },
-    {
-      "name": "balenaEtcher",
-      "version": "2.1.6",
-      "bundle_id": "io.balena.etcher",
-      "location": "/Applications/balenaEtcher.app"
-    },
-    {
-      "name": "iStat Menus",
-      "version": "6.73",
-      "bundle_id": "com.bjango.istatmenus.mas",
-      "location": "/Applications/iStat Menus.app"
-    },
-    {
-      "name": "Claude Code URL Handler",
-      "version": "1.0",
-      "bundle_id": "com.anthropic.claude-code-url-handler",
-      "location": "~/Applications/Claude Code URL Handler.app"
     }
   ]
 }

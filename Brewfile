@@ -167,14 +167,10 @@ cask "obsidian"
 cask "omnidisksweeper"
 # Verify system files structure, run miscellaneous maintenance and more
 cask "onyx"
-# AI coding agent desktop client
-cask "opencode-desktop"
 # Control your tools with a few keystrokes
 cask "raycast"
 # .NET IDE
 cask "rider"
-# App that enables mouse-free UI interaction
-cask "shortcat"
 # Screenshot measurement and annotation tool
 cask "shottr"
 # Messaging app with a focus on speed and security
@@ -185,6 +181,8 @@ cask "transmission"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
+# Menu bar toolkit with keep-awake, system monitor and volume mixer
+cask "vorssaint"
 # Connect to Windows
 cask "windows-app"
 # Multiplayer code editor

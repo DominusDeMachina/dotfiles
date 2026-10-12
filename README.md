@@ -5,7 +5,7 @@ Personal macOS configuration, managed with a bare Git repository at
 
 ## Current snapshot
 
-Updated September 15, 2026 from the running Mac.
+Updated October 12, 2026 from the running Mac.
 
 - `Brewfile`: Homebrew packages, apps, VS Code extensions, and supported Go,
   Cargo, uv, and npm tools.
