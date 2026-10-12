@@ -10,20 +10,14 @@
 .config/bat/themes/Catppuccin Mocha.tmTheme
 .config/btop/btop.conf
 .config/eza/theme.yml
-.config/flipperdevices.com/qFlipper.ini
-.config/gcloud/configurations/config_default
-.config/gh-dash/config.yml
 .config/gh/config.yml
 .config/ghostty/config
 .config/ghostty/themes/catppuccin-mocha.conf
 .config/git/ignore
 .config/github-copilot/intellij/global-copilot-instructions.md
 .config/github-copilot/intellij/mcp.json
-.config/helix/config.toml
-.config/helix/languages.toml
 .config/herdr/config.toml
 .config/htop/htoprc
-.config/jgit/config
 .config/karabiner/karabiner.json
 .config/lazygit/config.yml
 .config/mise/config.toml
@@ -46,7 +40,6 @@
 .config/opencode/opencode.jsonc
 .config/opencode/package-lock.json
 .config/opencode/package.json
-.config/openspec/config.json
 .config/posting/config.yaml
 .config/raycast-scripts/rn/android-logcat.sh
 .config/raycast-scripts/rn/boot-ios-sim.sh
@@ -56,7 +49,6 @@
 .config/starship.toml
 .config/television/config.toml
 .config/thefuck/settings.py
-.config/xnviewmp/xnview.ini
 .config/yazi/flavors/catppuccin-mocha.yazi/LICENSE
 .config/yazi/flavors/catppuccin-mocha.yazi/LICENSE-tmtheme
 .config/yazi/flavors/catppuccin-mocha.yazi/README.md

@@ -14,9 +14,9 @@ Updated September 15, 2026 from the running Mac.
 - `mac-setup/raycast-extensions.json`: installed Raycast extension inventory.
 - `mac-setup/tracked-files.txt`: configuration files included in this snapshot.
 - Shell and developer settings: Zsh, Git, tmux, SSH connection settings, mise,
-  Neovim, Ghostty, Helix, Zed, VS Code, and Claude Code.
+  Neovim, Ghostty, Zed, VS Code, and Claude Code.
 - Additional app settings include Karabiner, Neru, Yazi, eza, lazygit,
-  television, posting, OpenCode, and XnView MP.
+  television, posting, and OpenCode.
 
 This saves setup files and installation inventories. App documents, account
 sessions, credentials, browser profiles, and a complete macOS preferences image
