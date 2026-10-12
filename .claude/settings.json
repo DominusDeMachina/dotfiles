@@ -23,7 +23,7 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "claude-fable-5-1[1m]",
+  "model": "sonnet",
   "hooks": {
     "PreToolUse": [
       {
@@ -67,16 +67,6 @@
     ],
     "SessionStart": [
       {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node \"/Users/gennadiyfurduy/.claude/hooks/caveman-activate.js\"",
-            "timeout": 5,
-            "statusMessage": "Loading caveman mode..."
-          }
-        ]
-      },
-      {
         "matcher": "*",
         "hooks": [
           {
@@ -109,18 +99,6 @@
           }
         ]
       }
-    ],
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node \"/Users/gennadiyfurduy/.claude/hooks/caveman-mode-tracker.js\"",
-            "timeout": 5,
-            "statusMessage": "Tracking caveman mode..."
-          }
-        ]
-      }
     ]
   },
   "statusLine": {
@@ -130,19 +108,15 @@
   "enabledPlugins": {
     "lua-lsp@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true,
-    "swift-lsp@claude-plugins-official": true
+    "swift-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "ai-mt": {
       "source": {
         "source": "directory",
         "path": "/Users/gennadiyfurduy/ratel/ai-mt"
-      }
-    },
-    "caveman": {
-      "source": {
-        "source": "github",
-        "repo": "JuliusBrussee/caveman"
       }
     }
   },

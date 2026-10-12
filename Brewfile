@@ -51,8 +51,6 @@ brew "hackrf"
 brew "hashcat"
 # Utils for conversion of cap/pcap/pcapng WiFi dump files
 brew "hcxtools"
-# Post-modern modal text editor
-brew "helix"
 # Agent multiplexer that lives in your terminal
 brew "herdr"
 # Improved top (interactive process viewer)
@@ -161,7 +159,7 @@ cask "microsoft-auto-update"
 cask "microsoft-office"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
-# Keyboard driven navigation for macOS
+# Keyboard driven navigation
 cask "y3owk1n/tap/neru", trusted: true
 # Open-source software for live streaming and screen recording
 cask "obs"
@@ -229,12 +227,5 @@ uv "notebooklm-mcp-cli"
 uv "posting"
 uv "ruff"
 uv "specify-cli", source: "git+https://github.com/github/spec-kit.git"
-npm "@earendil-works/pi-coding-agent"
-npm "@openai/codex"
 npm "@swmansion/argent"
-npm "bait"
 npm "corepack"
-
-# Installed third-party formulae omitted by Homebrew bundle dump.
-brew "jesseduffield/lazydocker/lazydocker"
-brew "wix-incubator/brew/applesimutils"
