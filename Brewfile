@@ -121,8 +121,6 @@ brew "zoxide"
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Password manager that keeps all passwords secure behind one password
-cask "1password"
 # Command-line interface for 1Password
 cask "1password/tap/1password-cli"
 # Tools for building Android applications
@@ -183,7 +181,6 @@ uv "posting"
 uv "ruff"
 uv "specify-cli", source: "git+https://github.com/github/spec-kit.git"
 npm "@swmansion/argent"
-npm "corepack"
 
 # Installed third-party formulae omitted by Homebrew bundle dump.
 brew "jesseduffield/lazydocker/lazydocker"
