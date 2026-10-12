@@ -1,7 +1,5 @@
 tap "1password/tap", trusted: true
 tap "jesseduffield/lazydocker"
-tap "reyamira/tap", "https://github.com/reyamira/homebrew-tap.git"
-tap "supabase/tap"
 tap "wix-incubator/brew", "https://github.com/wix-incubator/homebrew-brew.git"
 tap "xykong/tap"
 tap "y3owk1n/tap"
