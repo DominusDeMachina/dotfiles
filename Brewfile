@@ -37,8 +37,6 @@ brew "git-delta"
 brew "gitleaks"
 # Render markdown on the CLI
 brew "glow"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
 # Low cost software radio platform
 brew "hackrf"
 # World's fastest and most advanced password recovery utility
@@ -89,8 +87,6 @@ brew "resvg"
 brew "rich-cli"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Safe, concurrent, practical language
-brew "rust"
 # Display and control your Android device
 brew "scrcpy"
 # Cross-shell prompt for astronauts
@@ -179,15 +175,6 @@ vscode "ms-toolsai.vscode-jupyter-slideshow"
 vscode "ms-vscode-remote.remote-containers"
 vscode "redhat.vscode-yaml"
 vscode "vscodevim.vim"
-go "github.com/air-verse/air"
-go "github.com/protomaps/go-pmtiles"
-go "golang.org/x/tools/gopls"
-go "github.com/AlexanderGrooff/mermaid-ascii"
-go "github.com/golang-migrate/migrate/v4/cmd/migrate"
-go "honnef.co/go/tools/cmd/staticcheck"
-go "github.com/a-h/templ/cmd/templ"
-cargo "lazynmap"
-cargo "md-tui"
 uv "debugpy"
 uv "graphifyy"
 uv "harlequin[mysql,postgres]"
