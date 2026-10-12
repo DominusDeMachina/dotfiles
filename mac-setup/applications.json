@@ -1,5 +1,5 @@
 {
-  "captured": "2026-10-12T11:03:13.823222+00:00",
+  "captured": "2026-10-12T11:12:12.045177+00:00",
   "apps": [
     {
       "name": ".Karabiner-VirtualHIDDevice-Manager",
@@ -92,12 +92,6 @@
       "location": "/Applications/Karabiner-EventViewer.app"
     },
     {
-      "name": "LanScan",
-      "version": "8.2.17",
-      "bundle_id": "com.iwaxx.LanScan",
-      "location": "/Applications/LanScan.app"
-    },
-    {
       "name": "Microsoft Excel",
       "version": "16.113.4",
       "bundle_id": "com.microsoft.Excel",
@@ -120,12 +114,6 @@
       "version": "16.113.3",
       "bundle_id": "com.microsoft.Word",
       "location": "/Applications/Microsoft Word.app"
-    },
-    {
-      "name": "Moshi",
-      "version": "",
-      "bundle_id": "",
-      "location": "/Applications/Moshi.app"
     },
     {
       "name": "Neru",

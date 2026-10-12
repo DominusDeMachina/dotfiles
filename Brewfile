@@ -131,20 +131,12 @@ brew "zsh-syntax-highlighting"
 cask "1password"
 # Command-line interface for 1Password
 cask "1password/tap/1password-cli"
-# Transfer files from and to an Android smartphone
-cask "android-file-transfer"
 # Tools for building Android applications
 cask "android-studio"
 # Application uninstaller
 cask "appcleaner"
-# Tool to flash OS images to SD cards & USB drives
-cask "balenaetcher"
 # Scriptable scratchpad for developers
 cask "boop"
-# Universal database tool and SQL client
-cask "dbeaver-community"
-# Collaborative team software
-cask "figma"
 cask "flux-markdown"
 cask "font-fira-code-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
@@ -159,8 +151,6 @@ cask "microsoft-office"
 cask "microsoft-teams"
 # Keyboard driven navigation
 cask "y3owk1n/tap/neru", trusted: true
-# Open-source software for live streaming and screen recording
-cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Finds large, unwanted files and deletes them
@@ -171,16 +161,12 @@ cask "onyx"
 cask "raycast"
 # .NET IDE
 cask "rider"
-# Screenshot measurement and annotation tool
-cask "shottr"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # Open-source BitTorrent client
 cask "transmission"
 # Open-source code editor
 cask "visual-studio-code"
-# Multimedia player
-cask "vlc"
 # Menu bar toolkit with keep-awake, system monitor and volume mixer
 cask "vorssaint"
 # Connect to Windows
