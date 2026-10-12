@@ -123,8 +123,6 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 # Command-line interface for 1Password
 cask "1password/tap/1password-cli"
-# Tools for building Android applications
-cask "android-studio"
 cask "flux-markdown"
 cask "font-fira-code-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
