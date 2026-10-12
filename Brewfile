@@ -184,3 +184,7 @@ uv "ruff"
 uv "specify-cli", source: "git+https://github.com/github/spec-kit.git"
 npm "@swmansion/argent"
 npm "corepack"
+
+# Installed third-party formulae omitted by Homebrew bundle dump.
+brew "jesseduffield/lazydocker/lazydocker"
+brew "wix-incubator/brew/applesimutils"
